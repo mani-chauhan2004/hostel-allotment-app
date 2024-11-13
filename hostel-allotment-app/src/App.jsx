@@ -9,9 +9,12 @@ import RegistrationPage from './components/RegisterPage';
 
 export default function App() {
   return (
-<>
-     <LoginPage/>
-</>
-      
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/register" element={<RegistrationPage />} />
+        {/* <Route path="/home" element={<HomePage />} /> */}
+      </Routes>
+    </Router>
+  );
 }
